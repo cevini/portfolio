@@ -61,7 +61,8 @@ header{
 }
 .scroll-active{
   bottom: 2rem;
-  transition: 0.3s
+  transition: 0.3s;
+  z-index:1000
 }
 .scroll-top i{
   padding: 8px;

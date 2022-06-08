@@ -58,6 +58,7 @@ header{
   position: fixed;
   bottom: -100%;
   right: 1.5rem;
+  z-index:1000
 }
 .scroll-active{
   bottom: 2rem;

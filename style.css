@@ -36,7 +36,7 @@ p, a{
 
 header{
   position: fixed;
-  min-height: 90%;
+  height: 100%;
   width: 300px;
   padding: 10px;
   display: flex;

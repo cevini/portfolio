@@ -1,14 +1,31 @@
-let menu = document.querySelector(".menu-icon");
-let navbar = document.querySelector(".navbar");
+//Portfólio (Filter)
 
-menu.onclick = () => {
-  navbar.classList.toggle('open-menu')
-  menu.classList.toggle("move");
-};
-window.onscroll = () =>{
-  navbar.classList.remove('open-menu')
-  menu.classList.remove("move");
+let list = document.querySelectorAll('.list');
+let itemBox = document.querySelectorAll('.itemBox');
+
+for(let i = 0; i<list.length; i++){
+  list[i].addEventListener('click', function(){
+    for(let j = 0; j<list.length; j++){
+      list[j].classList.remove('active');
+    }
+    this.classList.add('active');
+
+    let dataFilter = this.getAttribute('data-filter');
+
+    for( let k = 0; k<itemBox.length; k++){
+      itemBox[k].classList.remove('active');
+      itemBox[k].classList.add('hide');
+
+      if(itemBox[k].getAttribute('data-item') == dataFilter ||
+      dataFilter == "tudo"){
+        itemBox[k].classList.remove('hide');
+        itemBox[k].classList.add('active')
+      }
+    }
+  })
 }
+
+//Contato (Sistema de envio de email e validação)
 
 function validate() {
   let name = document.querySelector(".name")
@@ -51,14 +68,62 @@ function success(){
   })
 }
 
-let header = document.querySelector('header')
+//Efeito scroll para cada item da Barra de navegação
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("header-active", window.scrollY > 0);
-});
+const menuItems = document.querySelectorAll('.menu li');
 
-let scrollTop = document.querySelector(".scroll-top")
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick);
+})
 
-window.addEventListener("scroll", () => {
-  scrollTop.classList.toggle("scroll-active", window.scrollY >= 400);
-});
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const to = getScrollTopByHref(event.target);
+  scrollToPosition(to);
+}
+
+function scrollToPosition(to){
+  // window.scroll({
+  //   top: to,
+  //   behavior: "smooth",
+  // });
+  smoothScrollTo(0, to);
+}
+
+
+function getScrollTopByHref(element){
+  const id = element.getAttribute('href');
+  return document.querySelector(id).offsetTop;
+}
+
+        /**
+     * Smooth scroll animation
+     * @param {int} endX: destination x coordinate
+     * @param {int} endY: destination y coordinate
+     * @param {int} duration: animation duration in ms
+     */
+    function smoothScrollTo(endX, endY, duration) {
+      const startX = window.scrollX || window.pageXOffset;
+      const startY = window.scrollY || window.pageYOffset;
+      const distanceX = endX - startX;
+      const distanceY = endY - startY;
+      const startTime = new Date().getTime();
+
+      duration = typeof duration !== 'undefined' ? duration : 600;
+
+      // Easing function
+      const easeInOutQuart = (time, from, distance, duration) => {
+        if ((time /= duration / 2) < 1) return distance / 2 * time * time * time * time + from;
+        return -distance / 2 * ((time -= 2) * time * time * time - 2) + from;
+      };
+
+      const timer = setInterval(() => {
+        const time = new Date().getTime() - startTime;
+        const newX = easeInOutQuart(time, startX, distanceX, duration);
+        const newY = easeInOutQuart(time, startY, distanceY, duration);
+        if (time >= duration) {
+          clearInterval(timer);
+        }
+        window.scroll(newX, newY);
+      }, 1000 / 60); // 60 fps
+    };

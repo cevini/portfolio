@@ -138,7 +138,7 @@ header hr{
   transition-duration: 2050ms
 }
 section{
-  margin-left: 300px;
+  padding-left: 300px;
   min-height: 100vh
 }
 
@@ -375,7 +375,7 @@ section{
     width: 4.5rem
   }
   section{
-    margin-left: 4.5rem
+    padding-left: 4.5rem
   }
   .menu-hide, .menu-plus{
     display: none !important

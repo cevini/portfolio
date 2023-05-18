@@ -1,7 +1,5 @@
-<h1 align="center">Olá, me chamo Vinícius Mangeth</h1>
-<h3 align="center">Programador FullStack Iniciante</h3>
-
-- Atualmente estou estudando os conceitos básicos dos três elementos principais. **Html, Css e JavaScript**
+<h1 align="center">Bem-Vindo ao meu Portfólio</h1>
+<h3 align="center">Portfólio destinado a mostrar:</h3>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

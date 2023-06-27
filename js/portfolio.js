@@ -12,7 +12,7 @@ const portfolio = [
     img: "banner-primos-2.jpg",
     categoria: "banner",
     titulo: "Os Primos Acústico | Belo Horizonte",
-    link: "https://www.sympla.com.br/os-primos-acustico---edicao-belo-horizonte__1988311",
+    link: "https://www.instagram.com/p/CsXEHB2P7pF/",
   },
   {
     img: "seguimotas.png",

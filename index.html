@@ -1,293 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br" dir="ltr">
+<html lang="pt-br">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta https-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="webportfolio" />
-    <link rel="stylesheet" href="https://cevini.github.io/portfolio/style.css" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://i.imgur.com/0ekhaoN.jpg?1"
-    />
-    <!-- Ícone do Title -->
     <script
       src="https://kit.fontawesome.com/5d602d132f.js"
       crossorigin="anonymous"
     ></script>
-    <title>Vinicius Mangeth | Site</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Vinícius Mangeth | Portfólio</title>
   </head>
   <body>
-    <!-- Barra de Navegação -->
     <header>
-      <div class="menu-justify">
-        <div class="menu-profile">
-          <img src="https://i.imgur.com/0ekhaoN.jpg?1" alt="" />
-          <div class="menu-hide menu-profile-text">
-            <h4>Olá! Eu sou</h4>
-            <h1>Vinícius Mangeth</h1>
-          </div>
-        </div>
-        <hr />
-        <div class="menu">
-          <ul>
-            <li href="#home">
-              <a href="#home"
-                ><i href="#home" class="fa-solid fa-house"></i>
-                <span href="#home" class="menu-hide">Início</span></a
-              >
-            </li>
-            <li href="#about">
-              <a href="#about"
-                ><i href="#about" class="fa-solid fa-user"></i>
-                <span href="#about" class="menu-hide">Sobre</span></a
-              >
-            </li>
-            <li href="#portfolio">
-              <a href="#portfolio"
-                ><i href="#portfolio" class="fa-solid fa-book"></i>
-                <span href="#portfolio" class="menu-hide">Portfólio</span
-                ><i
-                  href="#portfolio"
-                  class="menu-plus menu-hide fa-solid fa-plus"
-                >
-                  6</i
-                ></a
-              >
-            </li>
-            <li href="#contact">
-              <a href="#contact"
-                ><i href="#contact" class="fa-solid fa-at"></i>
-                <span href="#contact" class="menu-hide">Contato</span></a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="menu-social">
-        <hr />
-        <div class="social-items">
-          <a href="https://www.instagram.com/vini_mgth/"
-            ><i class="fa-brands fa-instagram"></i
+      <div onclick="showSocialBtn()" class="img-social">
+        <img src="./img/perfil.jpg" alt="" />
+        <div class="social">
+          <a href="" class="btn btn-social1"
+            ><i class="fa-brands fa-square-instagram"></i
           ></a>
-          <a href="https://www.linkedin.com/in/vin%C3%ADcius-mangeth-584374239"
+          <a href="" class="btn btn-social2"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a href="" class="btn btn-social3"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
-          <a href="https://github.com/cevini"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-          <a href="https://linktr.ee/ce_vini"
-            ><i class="fa-solid fa-tree"></i
-          ></a>
         </div>
       </div>
+      <div class="radius"></div>
     </header>
-    <!-- Início -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h5>Website</h5>
-        <h1>Vinícius Mangeth</h1>
-        <p>Conheça mais sobre meu espaço digital.</p>
-        <a href="https://github.com/cevini" class="btn"
-          ><i class="fa-brands fa-github"></i> GitHub</a
-        >
+    <main>
+      <div class="home-title">
+        <h1 class="title">Vinícius Mangeth</h1>
+        <span class="subtitle">
+          <h4>programador iniciante</h4>
+          <h4>designer amador</h4>
+          <h4>músico</h4>
+        </span>
+        <a href="mailto:vini.mgth@gmail.com" class="btn">Mensagem</a>
       </div>
-      <img src="https://i.imgur.com/l81TJTG.jpg" alt="" />
-    </section>
-    <!-- Sobre -->
-    <section class="about" id="about">
-      <img src="https://i.imgur.com/aiHGyP0.jpg" alt="" />
-      <div class="about-content">
-        <h5>Um pouco sobre mim</h5>
+      <div class="home-tab">
+        <div class="buttons">
+          <button class="posts-btn" onclick="moveToLeft()">Posts</button>
+          <button class="portfolio-btn" onclick="moveToRight()">
+            Portfólio
+          </button>
+        </div>
+        <div class="content">
+          <div id="posts" class="posts container">
+            <p>Em breve</p>
+          </div>
+          <div id="portfolio" class="portfolio container">
+            <div class="item">
+              <img src="./img/loading.gif" alt="" />
+              <div class="item-layer">
+                <h5>carregando categoria..</h5>
+                <span>carregando titulo..</span>
+                <a href="" class="btn">disponibilizando..</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sobre container">
+        <h1>Sobre mim</h1>
+        <hr />
         <p>
           Criei esse site como o meu canto particular para qualquer tipo de
           trabalho e entretenimento já feito por mim. Sempre gostei de animações
-          e assistia grandes Youtubers na época de 2010 até Hoje. Atualmente
-          pratico criação de websites e sempre estou aprimorando minhas
+          e assistia grandes influencers dessa área em 2010 até hoje. Atualmente
+          pratico desenvolvimento web, criação de banners e cartazes, e as vezes
+          costumo editar vídeos por diversão. Sempre estou aprimorando minhas
           habilidades.
         </p>
         <p>
           Estudo violão solo. Sempre gostei das variadas sensações que a música
           pode trazer, até porque parte da minha infânica foi só ouvindo trilhas
-          sonoras famosas dos games. Comecei a tocar em 2018 usando um violão
-          abandonado no depósito da minha avó, mesmo empoeirado e com o braço
-          empenado. Sou a prova viva de que não existe isso de ter dom pra se
-          encaixar naquilo, é preciso ter força de vontade.
+          sonoras de games. Comecei a tocar em 2018 usando um violão abandonado
+          no depósito do meu avô mesmo empoeirado e com o braço empenado. Sou a
+          prova viva de que não existe isso de ter dom pra se encaixar naquilo,
+          é preciso ter força de vontade.
         </p>
         <p>
-          Pandemia chegou e meu entretenimento entre amigos era, e é de vez em
-          quando, editar vídeos engraçados. E hoje eu faço coisas incríveis
-          deixando uma marca na vida das pessoas fazendo elas felizes. Hoje
-          também pretendo realizar serviços para as pessoas que me contatarem,
-          seja banner, vídeos, website e até ensinar a tocar violão. Gostaria de
-          me especializar algum dia na área de design e programação.
+          Com a chegada da pandemia os meus hobbies foram se tornando mais
+          precisos e as vezes eles mesmos tem a possibilidade fazer pessoas
+          espairecer. Hoje também pretendo realizar serviços para as pessoas que
+          me contatarem, como serviços para freelancer, criação de banners,
+          edição de vídeos e até ensinar a tocar violão. Gostaria de me
+          especializar algum dia na área de design e programação full-stack.
         </p>
       </div>
-    </section>
-    <!-- Portfólio -->
-    <section class="portfolio" id="portfolio">
-      <div class="portfolio-content">
-        <ul class="portfolio-items">
-          <li class="list active" data-filter="tudo">Tudo</li>
-          <li class="list" data-filter="website">Websites</li>
-          <li class="list" data-filter="video">Vídeos</li>
-          <li class="list" data-filter="banner">Banners</li>
-        </ul>
-        <div class="portfolio-squares product">
-          <div class="itemBox" data-item="banner">
-            <img src="https://i.imgur.com/u4azyja.jpg" alt="" />
-            <div class="itemLayer">
-              <span>Os Primos Acústico BH ─ <br />Arthur Pecly & Stefano Mota</span>
-              <a
-                href="https://www.sympla.com.br/os-primos-acustico---edicao-belo-horizonte__1988311"
-                target="_blank"
-                class="btn"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="website">
-            <img src="https://i.imgur.com/cIOwRNt.png" alt="" />
-            <div class="itemLayer">
-              <span>Alexandre Marcelino ─ Portfólio</span>
-              <a
-                href="https://ale-marcelino.netlify.app/"
-                target="_blank"
-                class="btn"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="video">
-            <img src="https://i.imgur.com/zOM2yGU.png" alt="" />
-            <div class="itemLayer">
-              <span>Late Coração Cachorro | Lives do Stefano #14</span>
-              <a
-                href="https://www.youtube.com/watch?v=BwRQ_B6ZZRs"
-                target="_blank"
-                class="btn"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="website">
-            <img src="https://i.imgur.com/mMqBVk1.png" alt="" />
-            <div class="itemLayer">
-              <span>Matheus Zaramello ─ Portfólio</span>
-              <a
-                href="https://cevini.github.io/zara-portfolio/"
-                target="_blank"
-                class="btn"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="video">
-            <img src="https://i.imgur.com/ciqpPM0.png" alt="" />
-            <div class="itemLayer">
-              <span>Encontro de Cosplayers ─ Zaramberg e Faintedboy</span>
-              <a
-                href="https://www.youtube.com/watch?v=jiE7yV2IUGE&t=14s"
-                class="btn"
-                target="_blank"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="video">
-            <img src="https://i.imgur.com/91RPWvK.png" alt="" />
-            <div class="itemLayer">
-              <span>Clipe Surpresa p/ Sasamecosplay (com Luiza Caspary)</span>
-              <a
-                href="https://www.youtube.com/watch?v=7nPoZzHoY8A&t=68s"
-                class="btn"
-                target="_blank"
-                >Confira</a
-              >
-            </div>
-          </div>
-          <div class="itemBox" data-item="banner">
-            <img src="https://i.imgur.com/DRjs2I7.png" alt="" />
-            <div class="itemLayer">
-              <span
-                >Os Primos Acústico AL ─ <br />Arthur Pecly & Stefano Mota</span
-              >
-              <a
-                href="https://www.instagram.com/p/CWJLDBqrGXB/"
-                class="btn"
-                target="_blank"
-                >Confira</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contato -->
-    <section class="contact" id="contact">
-      <div class="contact-content">
-        <div class="contact-email">
-          <form class="contact-form" action="" method="post" id="contact-form">
-            <h3>Contate-me!</h3>
-            <input type="text" placeholder="Seu Nome" class="name" required />
-            <input
-              type="email"
-              placeholder="Seu Melhor Email"
-              class="email"
-              name=""
-              value=""
-              required
-            />
-            <textarea
-              name=""
-              rows="5"
-              cols="30"
-              placeholder="Qual é a boa?"
-              class="message"
-              required
-            ></textarea>
-            <input type="submit" name="" value="Enviar" class="send-btn" />
-          </form>
-          <div class="menu-social">
-            <hr />
-            <div class="social-items">
-              <a href="https://www.instagram.com/vini_mgth/"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/vin%C3%ADcius-mangeth-584374239"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/cevini"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="https://linktr.ee/ce_vini"
-                ><i class="fa-solid fa-tree"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <a href="https://www.instagram.com/vini_mgth/" class="rodape"
-          >© 2022 | vini_mgth</a
-        >
-      </div>
-    </section>
-    <!-- Scripts -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("8V5Rwqd0Srib5pMjo");
-      })();
-    </script>
-    <script
-      type="text/javascript"
-      src="https://cevini.github.io/portfolio/script.js"
-    ></script>
+    </main>
+    <a href="#" onclick="scrollToTop()" class="scroll"
+      ><i class="fa-solid fa-angles-up"></i
+    ></a>
+    <script src="./js/portfolio.js"></script>
+    <script src="./js/posts.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

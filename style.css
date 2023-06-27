@@ -158,26 +158,6 @@ header .radius::after {
 .home-title .subtitle h4 {
   font-weight: 600;
 }
-.home-title .subtitle h4:first-child:after {
-  content: "";
-  width: 6px;
-  aspect-ratio: 10 / 10;
-  border-radius: 50%;
-  background-color: var(--preto);
-  position: absolute;
-  top: 8px;
-  left: 177.6px;
-}
-.home-title .subtitle h4:last-child::before {
-  content: "";
-  width: 6px;
-  border-radius: 50%;
-  aspect-ratio: 10 / 10;
-  background-color: var(--preto);
-  position: absolute;
-  top: 8px;
-  right: 56px;
-}
 .home-tab {
   position: relative;
   display: flex;

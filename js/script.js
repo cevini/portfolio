@@ -1,6 +1,33 @@
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: smooth });
+const root = document.querySelector(":root");
+const tema = document.querySelector(".slider");
+
+function mudarTema() {
+  console.log("click");
+  if (root.style.getPropertyValue("--branco") === "#000") {
+    root.style.setProperty("--branco", "#fff");
+    root.style.setProperty("--preto", "#000");
+  } else {
+    root.style.setProperty("--branco", "#000");
+    root.style.setProperty("--preto", "#fff");
+  }
 }
+tema.addEventListener("click", () => mudarTema());
+
+//ScrollTop
+
+let scrollTop = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", () => {
+  scrollTop.classList.toggle("scroll-active", window.scrollY >= 200);
+});
+
+//AutoTyping .subtitle
+var typed = new Typed(".auto-type", {
+  strings: ["programador iniciante", "designer amador", "músico"],
+  typeSpeed: 50,
+  backSpeed: 30,
+  loop: true,
+});
 
 //Slide Tag (Posts / Portfólio)
 

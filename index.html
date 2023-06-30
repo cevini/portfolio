@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" manifest="/cache.manifest">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,31 +12,31 @@
     <title>Vinícius Mangeth | Portfólio</title>
   </head>
   <body>
-    <header>
+    <header id="inicio">
       <div onclick="showSocialBtn()" class="img-social">
         <img src="./img/perfil.jpg" alt="" />
         <div class="social">
-          <a href="https://www.instagram.com/vinittelvius/" class="btn btn-social1"
+          <a href="" class="btn btn-social1"
             ><i class="fa-brands fa-square-instagram"></i
           ></a>
-          <a href="https://www.youtube.com/@kiritto6743" class="btn btn-social2"
+          <a href="" class="btn btn-social2"
             ><i class="fa-brands fa-youtube"></i
           ></a>
-          <a href="https://br.linkedin.com/in/vin%C3%ADcius-mangeth-584374239?trk=people-guest_people_search-card" class="btn btn-social3"
+          <a href="" class="btn btn-social3"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
         </div>
       </div>
       <div class="radius"></div>
+      <label class="switch">
+        <input class="checkbox" type="checkbox" />
+        <span class="slider"></span>
+      </label>
     </header>
     <main>
       <div class="home-title">
         <h1 class="title">Vinícius Mangeth</h1>
-        <span class="subtitle">
-          <h4>programador iniciante</h4>
-          <h4>designer amador</h4>
-          <h4>músico</h4>
-        </span>
+        <h5 class="subtitle"><span class="auto-type"></span></h5>
         <a href="mailto:vini.mgth@gmail.com" class="btn">Mensagem</a>
       </div>
       <div class="home-tab">
@@ -56,7 +56,7 @@
               <div class="item-layer">
                 <h5>carregando categoria..</h5>
                 <span>carregando titulo..</span>
-                <a href="" class="btn">disponibilizando..</a>
+                <a href="" target="_blank" class="btn">disponibilizando..</a>
               </div>
             </div>
           </div>
@@ -91,9 +91,11 @@
         </p>
       </div>
     </main>
-    <a href="#" onclick="scrollToTop()" class="scroll"
-      ><i class="fa-solid fa-angles-up"></i
+    <a id="topo" class="scroll-top"
+      ><i href="#inicio" class="fa-solid fa-angles-up"></i
     ></a>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="./js/scroll.js"></script>
     <script src="./js/portfolio.js"></script>
     <script src="./js/posts.js"></script>
     <script src="./js/script.js"></script>

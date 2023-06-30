@@ -6,7 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  transition: 0.3s;
+  transition: ease 0.3s;
   outline: none;
   font-family: var(--font);
 }
@@ -23,6 +23,7 @@
 html,
 body {
   behavior: smooth;
+  overflow-x: hidden;
 }
 h1,
 h4 {
@@ -32,25 +33,76 @@ main {
   background-color: var(--branco);
   padding: 1rem 0;
 }
-.scroll {
+.scroll-top {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  width: 2rem;
-  height: 2rem;
+  bottom: -100%; /*Ajustar em 2rem para visualizar*/
+  right: 1.5rem;
+  cursor: pointer;
+}
+.scroll-top i {
+  color: var(--branco);
+  font-size: 1.3rem;
   border-radius: 50%;
-  background-color: var(--preto);
-  transition: all 150ms ease;
+  background: var(--preto);
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
-  color: var(--branco);
+}
+.scroll-top i:hover {
+  transition: 0.3s ease;
+}
+.scroll-active {
+  bottom: 1.5rem;
+  transition: 0.3s;
 }
 .container {
   width: 100%;
   max-width: 960px;
   margin: auto;
+}
+.switch {
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.checkbox {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  background-color: var(--branco);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 5px;
+  width: 23px;
+  aspect-ratio: 10 / 10;
+  border-radius: 50%;
+  background-color: var(--preto);
+  transform: translateX(0);
+  transition: all 0.5s ease-out;
+}
+
+.checkbox:checked + .slider {
+  background-color: var(--branco);
+}
+
+.checkbox:checked + .slider::before {
+  transform: translateX(30px);
+  background-color: var(--preto);
 }
 .btn {
   color: var(--branco);
@@ -63,7 +115,7 @@ main {
   transform: translateY(3px);
 }
 header {
-  min-height: 50vh;
+  min-height: 20rem;
   background: url("./img/home-bg.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -125,6 +177,7 @@ header .radius::before {
   left: 0%;
   bottom: 0;
   border-radius: 1rem 1rem 0 0;
+  transition: all;
 }
 header .radius::after {
   content: "";
@@ -153,10 +206,9 @@ header .radius::after {
   display: flex;
   text-transform: capitalize;
   position: relative;
-  gap: 1rem;
-}
-.home-title .subtitle h4 {
+  gap: 1px;
   font-weight: 600;
+  color: var(--preto);
 }
 .home-tab {
   position: relative;
@@ -207,6 +259,9 @@ header .radius::after {
 }
 .home-tab .content .posts {
   width: 100%;
+}
+.home-tab .content .posts p {
+  color: var(--preto);
 }
 .home-tab .content .portfolio {
   width: calc(100% - 1rem);
@@ -286,14 +341,14 @@ header .radius::after {
   top: 100%;
   border-radius: 8px;
   overflow: hidden;
-  color: var(--branco);
+  color: white;
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
   padding: 1rem;
 }
 .home-tab .content .portfolio .item .item-layer .btn {
-  background: var(--branco);
-  color: var(--preto);
+  color: black;
+  background: white;
   padding: 0.5rem 2rem;
   margin-top: 10px;
 }
@@ -307,7 +362,7 @@ header .radius::after {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 .sobre hr {
   background: var(--preto);
@@ -317,4 +372,5 @@ header .radius::after {
 }
 .sobre p {
   text-indent: 1rem;
+  color: var(--preto);
 }

@@ -6,7 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  transition: ease 0.3s;
+  transition: ease 0.3s !important;
   outline: none;
   font-family: var(--font);
 }
@@ -160,6 +160,22 @@ header img {
   position: absolute;
   bottom: -5rem;
   z-index: 1;
+  animation: pulse 3s both infinite;
+  -webkit-animation: pulsar 3s both infinite;
+}
+@keyframes pulsar {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  30% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
 }
 header .radius {
   width: 195px;
@@ -177,7 +193,7 @@ header .radius::before {
   left: 0%;
   bottom: 0;
   border-radius: 1rem 1rem 0 0;
-  transition: all;
+  transition: 0.3s ease !important;
 }
 header .radius::after {
   content: "";
@@ -188,6 +204,7 @@ header .radius::after {
   left: calc(50% + 80px + 1rem);
   bottom: 0;
   border-radius: 1rem 1rem 0 0;
+  transition: 0.3s ease !important;
 }
 
 .home-title {

@@ -51,9 +51,11 @@ function moveToLeft() {
 const socialBtn1 = document.querySelector(".btn-social1");
 const socialBtn2 = document.querySelector(".btn-social2");
 const socialBtn3 = document.querySelector(".btn-social3");
+const socialBtn4 = document.querySelector(".btn-social4");
 
 function showSocialBtn() {
-  socialBtn1.style.transform = "translateY(-8rem)";
-  socialBtn2.style.transform = "translateY(-7rem) translateX(-4rem)";
-  socialBtn3.style.transform = "translateY(-7rem) translateX(4rem)";
+  socialBtn1.style.transform = "translateY(-8rem) translateX(-2rem)";
+  socialBtn2.style.transform = "translateY(-6rem) translateX(-5rem)";
+  socialBtn3.style.transform = "translateY(-8rem) translateX(2rem)";
+  socialBtn4.style.transform = "translateY(-6rem) translateX(5rem)";
 }

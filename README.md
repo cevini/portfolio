@@ -6,7 +6,7 @@
 
 _Respositório destinado a exibir meus trabalhos e contribuições._ _Confira na íntegra:_
 
-_\-> https://portfolio-mgth.netlify.app/_
+_\-> https://vinimgth.netlify.app/_
 
   
 
